@@ -1,0 +1,68 @@
+* {
+    margin: 0; padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #333;
+}
+
+a {
+    color: #00f;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 1000px;
+}
+
+.editor h1,
+.editor p {
+    margin: 1em 0;
+}
+
+.editor h1 {
+    font-weight: normal;
+}
+
+.editor blockquote {
+    margin: 2em;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    font-style: italic;
+}
+
+.editor blockquote:before,
+.editor blockquote:after {
+    content: '"';
+}
+
+.editor .editable {
+    outline: none;
+}
+
+.editor .editable:after {
+    content: 'Enter text here.';
+    color: #666;
+    font-style: italic;
+    opacity: 0;
+}
+
+.editor .editable:empty:after {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+}
+
+@media screen and (min-width: 600px) {
+
+    body {
+        font-size: 1.2em;
+    }
+
+}

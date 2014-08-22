@@ -18,7 +18,6 @@ a {
 
 .wrapper {
     margin: 0 auto;
-    padding: 1em;
     max-width: 1000px;
 }
 
@@ -44,7 +43,9 @@ a {
 }
 
 .editor .editable {
+    padding: 1em;
     outline: none;
+    min-height: 100vh;
 }
 
 .editor .editable:after {

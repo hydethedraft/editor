@@ -19,7 +19,7 @@
         localStorage.setItem('content', editable.innerHTML);
 
         // Destroy any empty nodes within editable area when all text is removed.
-        if (!editable.innerText.trim()) {
+        if (editable.childNodes.length === 1 && editable.childNodes[0].nodeName === 'BR') {
 
             editable.innerHTML = '';
 

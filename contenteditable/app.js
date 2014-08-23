@@ -7,8 +7,16 @@
     // Activate contenteditable
     editable.setAttribute('contenteditable', true);
 
+    if (localStorage.getItem('content')) {
+
+        editable.innerHTML = localStorage.getItem('content');
+
+    }
+
     // Set event handler on keyup
     editable.addEventListener('keyup', function () {
+
+        localStorage.setItem('content', editable.innerHTML);
 
         // Destroy any empty nodes within editable area when all text is removed.
         if (!editable.innerText.trim()) {
